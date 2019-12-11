@@ -1,10 +1,12 @@
 import React from "react";
+import cn from "classnames";
 
-const InputField = ({ name, label, register, errors }) => {
+const InputField = ({ isTextArea, type, name, label, register, errors }) => {
+  const INPUTTYPE = isTextArea ? "textarea" : "input";
   return (
-    <>
+    <div class="myDiv">
       <label htmlFor={name}>{label}</label>
-      <input
+      <INPUTTYPE
         name={name}
         placeholder="..."
         ref={register({ required: true })}
@@ -15,8 +17,12 @@ const InputField = ({ name, label, register, errors }) => {
       {errors[name] &&
         errors[name].type === "required" &&
         "This field is required"}
-    </>
+    </div>
   );
+};
+
+InputField.defaultTypes = {
+  type: "text"
 };
 
 export default InputField;
