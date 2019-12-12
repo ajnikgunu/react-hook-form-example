@@ -4,7 +4,11 @@ import useForm from "react-hook-form";
 import MyInput from "./inputField";
 
 const FormComponent = () => {
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit, errors, formState } = useForm({
+    mode: "onChange"
+  });
+
+  const { isValid } = formState;
 
   const onSubmit = data => console.log("data=", data);
   return (
@@ -14,16 +18,20 @@ const FormComponent = () => {
       </div>
       <div>
         <MyInput
+          checkSameValue
           name="email"
           label="Email"
+          compareField="confirmemail" //filed to compare the same value
           errors={errors}
           register={register}
         />
       </div>
       <div>
         <MyInput
+          checkSameValue
           name="confirmemail"
           label="Confirm Email"
+          compareFiel="email" //filed to compare the same value
           errors={errors}
           register={register}
         />
@@ -38,7 +46,7 @@ const FormComponent = () => {
         />
       </div>
 
-      <button type="button" onClick={handleSubmit}>
+      <button type="button" onClick={handleSubmit} disabled={!isValid}>
         Submit
       </button>
     </form>

@@ -1,10 +1,15 @@
 .App {
   font-family: sans-serif;
-  width: 100%;
 }
 
 body {
   font-family: sans-serif;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+  margin-bottom: 20px;
 }
 
 textarea,
@@ -30,7 +35,7 @@ input {
 
 label {
   display: inline-block;
-  width: 120px;
+  width: 100px;
   margin-bottom: 20px;
 }
 

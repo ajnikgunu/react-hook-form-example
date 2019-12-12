@@ -1,7 +1,16 @@
 import React from "react";
 import cn from "classnames";
 
-const InputField = ({ isTextArea, type, name, label, register, errors }) => {
+const InputField = ({
+  isTextArea,
+  type,
+  name,
+  label,
+  register,
+  errors,
+  compareField,
+  checkSameValue
+}) => {
   const INPUTTYPE = isTextArea ? "textarea" : "input";
   return (
     <div class="myDiv">
@@ -22,7 +31,7 @@ const InputField = ({ isTextArea, type, name, label, register, errors }) => {
 };
 
 InputField.defaultTypes = {
-  type: "text"
+  type: "input"
 };
 
 export default InputField;
