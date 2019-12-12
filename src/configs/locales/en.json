@@ -1,0 +1,22 @@
+{
+  "en": {
+    "translation": {
+      "FORM": {
+        "LABELS": {
+          "NAME": "Name",
+          "EMAIL": "Email",
+          "CONFIRM_EMAIL": "Confirm Email",
+          "MESSAGE": "Message"
+        },
+        "ERRORS": {
+          "EMPTY_NAME": "Name cannot be Empty.",
+          "EMPTY_EMAIL": "Email cannot be Empty",
+          "INVALID_EMAIL": "Email cannot be Empty",
+          "EMPTY_CONFIRM_EMAIL": "Confirm-Email cannot be Empty",
+          "EMPTY_MESSAGE": "Message cannot be Empty",
+          "MESSAGE_SIZE_ERROR": "Message cannot be more than 100 characters"
+        }
+      }
+    }
+  }
+}

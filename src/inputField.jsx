@@ -9,7 +9,8 @@ const InputField = ({
   register,
   errors,
   compareField,
-  checkSameValue
+  checkSameValue,
+  emptyErrorMsg
 }) => {
   const INPUTTYPE = isTextArea ? "textarea" : "input";
   return (
@@ -23,9 +24,7 @@ const InputField = ({
           "is-error": errors[name]
         })}
       />
-      {errors[name] &&
-        errors[name].type === "required" &&
-        "This field is required"}
+      {errors[name] && errors[name].type === "required" && emptyErrorMsg}
     </div>
   );
 };
