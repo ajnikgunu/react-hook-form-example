@@ -6,7 +6,7 @@
   "main": "src/index.js",
   "dependencies": {
     "classnames": "2.2.6",
-    "i18next": "19.0.2",
+    "i18next": "26.3.4",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-hook-form": "3.28.15",
